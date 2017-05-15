@@ -1,0 +1,4 @@
+
+notes
+- any folder in content/ apart from images, extra, pages, is converted to a category
+- categories are only build (and displayed in the menu) IF the folder contains valid files.

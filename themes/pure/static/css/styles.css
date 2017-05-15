@@ -34,12 +34,13 @@ html {
 }
 
 #menu {
+
 	background-color:#fff; 
 }
 
 /*All anchors inside the menu should be styled like this.*/
 #menu a {
-    color: #999;
+    color: #999;    
     border: none;
     padding: 0.3em 0 0.3em 4em;
 }
@@ -78,7 +79,6 @@ box-sizing: border-box;
 }
 
 
-
 /*trying flexboxes*/
 /*or trying table, table-cell to keep same sizes of boxes.*/
 
@@ -115,7 +115,6 @@ box-sizing: border-box;
 
 .image-container-large-3-3 {
     height: 87vh;                   /* 87% of viewport*/
-    /*border: 1px solid #000;*/
     width: 100%;
     object-fit: cover;
 

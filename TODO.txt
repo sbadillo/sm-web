@@ -1,3 +1,0 @@
-TODO
-
-- check this tool! http://registry.jsonresume.org/
