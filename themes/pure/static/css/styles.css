@@ -1,4 +1,3 @@
-
 html {
     font-family: "Times New Roman", Times, serif;
 }
@@ -7,34 +6,67 @@ html {
 /* Main content modifications  */
 /*=============================*/
 
+/*trying to added another column*/
+#project-details {
+    width: 30%;
+    float: left;
+    line-height: 1.5em;
+    background-color: #efe !important;
+}
+
 /* The content `<div>` is where all your content goes.*/
 .content {
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     padding-top: 3.2em;
     padding-right: : 1em;
     padding-bottom: 1em;
     padding-left: 1em;
-    max-width: 900px;
+    max-width: 1000px;
     margin-bottom: 0px;
-    line-height: 1.6em;
+    line-height: 1.2em;
+    background-color: #fee !important;
+
+
 }
 
+#slideout {
+    margin-left:0%;
+    opacity: 1;
+    /*-webkit-transition: margin-left .7s ease-in-out;*/
+
+
+
+    transition:
+    /*  property            duration    delay */
+        margin-left         .5s         0.2s ease-in-out,
+        opacity             1.0s        0.8s
+
+}
+#slideout:target {
+
+
+    margin-left: 60%;
+    opacity: .6; 
+
+}
 /*=======================*/
 /* Sidebar modifications */
 /*=======================*/
 
 .brand-main {
-	color: #000;
-	font-size: 1.6em;
-	padding-top: 1em;
-	padding-left: 2em; 
-	padding-right: 1em;
-	padding-bottom: .6em;
+	font-color: #333;
+	font-size: 1.6rem;
+	margin-top: 2rem;
+    padding-top: 1rem;
+	padding-left: 2rem; 
+	/*padding-right: 1rem;*/
+	padding-bottom: 1.5rem;
 	text-decoration: none;
+    /*border-top: 1px solid #999;*/
+    /*border-bottom: 1x solid #999;*/
 }
 
 #menu {
-
 	background-color:#fff; 
 }
 
@@ -42,18 +74,18 @@ html {
 #menu a {
     color: #999;    
     border: none;
-    padding: 0.3em 0 0.3em 4em;
+    padding: 0.1rem 0 0.1rem 2rem;
+}
+
+/*style for fake "child" elements in the menu*/
+#menu a.pure-menu-child-1 {
+    padding-left: 2.5rem;
 }
 
 /*hovering over menu element effect*/
 #menu .pure-menu li a:hover, #menu .pure-menu li a:focus {
     background: #fff;
     color:#000;
-}
-
-/*style for fake "child" elements in the menu*/
-#menu a.pure-menu-child-1 {
-	padding-left: 5em;
 }
 
 /*Remove that light border to separate items into groups.*/
@@ -64,7 +96,7 @@ html {
 
 
 /*=======================*/
-/* Grids modifications */
+/* Grids modifications   */
 /*=======================*/
 
 
@@ -94,7 +126,9 @@ box-sizing: border-box;
 }
 
 .inside {
-    padding: 0.5em 0.5em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+
     text-align: center;
     margin: auto;
 }
@@ -117,12 +151,24 @@ box-sizing: border-box;
     height: 87vh;                   /* 87% of viewport*/
     width: 100%;
     object-fit: cover;
-
 }
 
 .image-container-small-1-3 {
     /*border: 1px solid #000;*/
-    height: calc(100%/3 - .1em*3) ;  /*container divided in three parts*/
+    height: calc(100%/3 - .3em)  ;            /*container divided in three parts*/
     width: 100%;
     object-fit: cover;
+}
+
+
+/* simple Fade-in for images from https://davidwalsh.name/lazyload-image-fade*/ 
+/*All images that have a tag 'data-src=' instead of 'src=' will use lazy loading.*/
+
+img {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+img[data-src] {
+    opacity: 0;
 }

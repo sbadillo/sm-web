@@ -8,36 +8,37 @@
 
 
 <div id="menu">
-	<div class="brand-main">{{ SITENAME }}</div>
 
-		<div class="pure-menu">
-			<ul class="pure-menu-list">
-				
-        <!-- Get all categories from folders as child menu items-->
+  <div class="brand-main">{{ SITENAME }}</div>
 
-        <li class="pure-menu-item"><a href="/" class="pure-menu-link">Parcours</a></li>
-          <ul class="pure-menu-list">
-					{% for cat, null in categories %}
-						<li class="pure-menu-item">
-								<a class="pure-menu-link pure-menu-child-1" href="{{ SITEURL }}/{{ cat.url }}">. {{ cat.name[2:] }}</a>
-						</li>
-					{% endfor %}
-					</ul>
+	<div class="pure-menu">
+		<ul class="pure-menu-list">
+			
+      <!-- Get all categories from folders as child menu items-->
 
-        <!-- Get pages in pages folder as menu items -->
-        
-        {% for p in pages %}
-				<li class="pure-menu-item" {% if p == page %}class="active"{% endif %}>
-					<a class="pure-menu-link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
-				</li>
+      <li class="pure-menu-item"><a href="/" class="pure-menu-link">Parcours</a></li>
+        <ul class="pure-menu-list">
+				{% for cat, null in categories %}
+					<li class="pure-menu-item">
+							<a class="pure-menu-link pure-menu-child-1" href="{{ SITEURL }}/{{ cat.url }}">. {{ cat.name }}</a>
+					</li>
 				{% endfor %}
+				</ul>
 
-			</ul>
+      <!-- Get pages in pages folder as menu items -->
+      
+      {% for p in pages %}
+			<li class="pure-menu-item" {% if p == page %}class="active"{% endif %}>
+				<a class="pure-menu-link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
+			</li>
+			{% endfor %}
 
-			<!-- <p class="tagline">{{ TAGLINE }}</p> -->
-		</div>
+		</ul>
+
+		<!-- <p class="tagline">{{ TAGLINE }}</p> -->
+	</div>
 </div>
 
 
 
-<script src="theme/js/ui.js"></script>
+<script src="{{SITEURL}}/theme/js/ui.js"></script>

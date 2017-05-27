@@ -1,0 +1,18 @@
+
+bash tricks:
+
+initiate some empty post files:
+
+for i in $(ls); do echo $'Title: ${i::-1}\n\ncoverimg:\ncovertext:' > "./${i}/${i::-1}.md"; done
+
+
+## create gallery folders:
+
+for i in $(ls); do mkdir ./${i}/gallery; done
+
+
+## fill gallery folder with 5 random images from loremflicker:
+
+for i in $(ls); do for n in $(seq 5); do curl http://loremflickr.com/600/400/design?random > "./${i}/images/${n}.png"; done; done
+
+## remove gallery folders

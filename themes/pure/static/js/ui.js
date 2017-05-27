@@ -1,5 +1,6 @@
 (function (window, document) {
 
+    console.log('im here');
     var layout   = document.getElementById('layout'),
         menu     = document.getElementById('menu'),
         menuLink = document.getElementById('menuLink'),

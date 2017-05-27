@@ -1,0 +1,73 @@
+/* used in template for categories masonry */
+/* -sb */
+
+.masonry {
+    padding: 0;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    column-gap: 1em;
+    font-size: .85em;
+}
+
+.item {
+    padding-bottom: 1em;
+    display: inline-block;
+    background: #fff;
+    width: 100%;
+    box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    vertical-align: bottom;
+    line-height: 0;
+    border: none;
+}
+
+.item img {
+    width: 100%;
+}
+
+.only-text {
+    padding:0;
+    margin:0;
+    line-height: 1.6em;
+    /*background: #ccc;*/
+    padding: 1.2em;
+    border:1px dashed #ddd;
+    /*border-radius: 10px;*/
+}
+
+
+/**/
+/* responsivenes*/
+/**/
+
+
+@media only screen and (min-width: 400px) {
+    .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .masonry {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .masonry {
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .content {
+        width: 1100px;
+    }
+}
