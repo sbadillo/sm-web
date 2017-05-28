@@ -11,45 +11,38 @@
   <div id="main">
 
 
-    
-<!--     <div id="project-details">
-      <p>This is the detail of the project, displayed in a columns. Ideally this columns grows from nothing when you click on a project.</p><br>
-      <p>The content on this column gets changed using javascript, depending on the project.</p>
-    </div -->
+    <div class="content">
 
-    <div class="content" id="slideout" >
+     Click <a id="activate-slideout" class="item-test item-test2" href="#">this</a> to activate the slideout with jquery.
 
-     Click <a href="#slideout" onClick="jQuery.history.load('slideout')">this</a> to transition the enclosing div.  Notice how the fragment (the part after the hash) matches up to the id of the div.
- 
-
-    <!-- Empieza masonry -->
+      <!-- Empieza masonry -->
 
       <div class="masonry">
       {% for article in articles|sort(attribute='date') %}  
         {% if article.coverimg and article.covertext %}
-          
-          <div class="item">
+          <div class="item item={{ article.slug }}">
             <a href={{ SITEURL }}/{{ article.url }}>
               <img data-src={{ article.coverimg }} title={{ article.title }}>
             </a>
             <p class="only-text">{{ article.covertext }}</p> 
           </div>
-        
           {% elif article.coverimg %}
-          <div class="item">
+          <div class="item item={{ article.slug }}">
             <a href={{ SITEURL}}/{{ article.url }}>
               <img data-src={{ article.coverimg }} title={{ article.title }}>
             </a>
           </div>
-
           {% elif article.covertext %}
           <div class="item">
             <p class="only-text">{{ article.covertext }}</p>
           </div>
         {% endif %}
       {% endfor %}        
-      </div> <!-- termina masonry -->
-   
+      </div>
+
+      <!-- termina masonry -->
+
+
     </div> <!-- end class=content-->
   </div> <!-- end id=main -->
 </div> <!-- end id=layout -->

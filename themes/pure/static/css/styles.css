@@ -26,27 +26,24 @@ html {
     line-height: 1.2em;
     background-color: #fee !important;
 
-
-}
-
-#slideout {
+    /* Transition default properties */
     margin-left:0%;
     opacity: 1;
     /*-webkit-transition: margin-left .7s ease-in-out;*/
-
-
 
     transition:
     /*  property            duration    delay */
         margin-left         .5s         0.2s ease-in-out,
         opacity             1.0s        0.8s
-
 }
-#slideout:target {
 
-
+.slideout {
     margin-left: 60%;
     opacity: .6; 
+}
+
+
+
 
 }
 /*=======================*/
