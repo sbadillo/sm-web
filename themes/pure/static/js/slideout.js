@@ -3,12 +3,8 @@ $(document).ready(function(){
 	// Script that adds slideout property to whole content section
 	
 	$('#activate-slideout').click(function() {
-
 		console.log($(this).attr("class")); 		// reads classes of clicked element
-
-	    $('.content').addClass('slideout');			// slidesout content element
-
-
+	    $('.content').toggleClass('slideout');			// slidesout content element
 
 	});
 
