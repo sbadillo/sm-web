@@ -6,6 +6,8 @@ $(document).ready(function(){
 		console.log($(this).attr("class")); 		// reads classes of clicked element
 	    $('.content').toggleClass('slideout');			// slidesout content element
 
+        $('#project-details').toggleClass('expanded');
+
 	});
 
 	// Need to do this for each element: 

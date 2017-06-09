@@ -8,10 +8,20 @@ html {
 
 /*trying to added another column*/
 #project-details {
-    width: 30%;
+    height: 0px;
+    max-width: 200px;
     float: left;
-    line-height: 1.5em;
+    display:inline;
     background-color: #efe !important;
+    
+    transition: height .2s 1s ease-in-out;
+
+}
+
+
+.expanded {
+    height:350px !important;
+    background-color: #eef !important;
 }
 
 /* The content `<div>` is where all your content goes.*/
